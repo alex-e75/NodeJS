@@ -1,35 +1,28 @@
-// Import a module
-const http = require('http')
-const url = require('url')
-const qs = require('querystring')
+express = require('express')
+path = require('path')
+const metrics = require('./dist/metrics.js')
 
-const content = '<!DOCTYPE html>' +
-'<html>' +
-'    <head>' +
-'        <meta charset="utf-8" />' +
-'        <title>ECE AST</title>' +
-'    </head>' + 
-'    <body>' +
-'         <p>Hello World !</p>' +
-'    </body>' +
-'</html>'
+app = express()
+app.use(express.static(path.join(__dirname, 'public')))
 
-const serverHandle = function (req, res) {
-  const route = url.parse(req.url)
-  const path = route.pathname 
-  const params = qs.parse(route.query)
 
-  res.writeHead(200, {'Content-Type': 'text/plain'});
+app.set('port', 3000);
+app.set('views', __dirname + "/views")
+app.set('view engine', 'ejs');
 
-  if (path === '/hello' && 'name' in params) {
-    res.write('Hello ' + params['name'])
-  } else {
-    res.write('Hello anonymous')
-  }
+app.get(
+  '/hello/:name',
+  (req, res) => res.render('./hello.ejs', { name: req.params.name })
+)
 
-  res.end();
-}
+app.get('/metrics.json', (req, res) => {
+  metrics.get((err, data) => {
+    if(err) throw err
+    res.status(200).json(data)
+  })
+})
 
-const server = http.createServer(serverHandle);
-server.listen(8080)
-// curl localhost:8080 or go to http://localhost:8080
+app.listen(
+  app.get('port'),
+  () => console.log(`server listening on ${app.get('port')}`)
+)
