@@ -1,18 +1,36 @@
-# Part 1: ExpressJS
+# Node.js Project
 
-Using the code and repo from last module, convert everything to use `express`
-instead of doing routing and server setup manually. You should have:
-- `/` home page with description
-- `/hello` page with the button and AJAX request for obtaining metrics
+## Introduction
 
-# Part 2: TypeScript
+Website that receives a ```name``` parameter and says hello + the name passed as parameter.
 
-Using the code and repo from last weeks TP and enhanced in class,
-add to `src/server.ts` the code to expose the front that we had previously
-in the `index.js`. You should have:
-- `/` home page with description
-- `/hello` page with the button and AJAX request for obtaining metrics
+## Installation
 
-# Notes:
+To be able to run the web server you must have node.js and npm installed.
+To check if you have it installed run:
+```
+node -v
+```
+If by running this command it doesn't show you the version number, install it by following the instructions in [https://nodejs.org/](https://nodejs.org/).
 
-This work is part of the continuous assessment of this class and will be the basis for your final project
+After having node install
+```
+npm install
+```
+
+
+## Usage
+
+Now you can start the web server in the terminal using the following command:
+```
+npm start
+```
+
+To see the website in the browser go to ```localhost:8115/``` and create a new account or you can run ```npm run populate``` to populate the app with test users and metrics.
+
+To see the credentials of these test users see the file [/bin/populate.ts](https://github.com/geraosio/ece-nodejs/blob/master/bin/populate.ts).
+
+## Contributors
+[Alexandre ELBAZ](https://github.com/alex-e75)
+[Alexis CALLIES](https://github.com/alexicali)
+

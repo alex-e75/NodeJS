@@ -4,9 +4,8 @@
   "description": "NodeJS Project - ECE ING4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "build": "./node_modules/.bin/tsc -p tsconfig.json"
+    "start": "./node_modules/.bin/ts-node src/server.ts",
+    "dev": "./node_modules/.bin/nodemon "
   },
   "repository": {
     "type": "git",
@@ -20,10 +19,13 @@
   "homepage": "https://github.com/alex-e75/NodeJS#readme",
   "dependencies": {
     "ejs": "^2.7.2",
-    "express": "^4.17.1",
-    "nodemon": "^1.19.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.12",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.5.2",
     "typescript": "^3.7.2"
   }
 }
