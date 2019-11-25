@@ -1,0 +1,29 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS Project - ECE ING4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "build": "./node_modules/.bin/tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-e75/NodeJS.git"
+  },
+  "author": "Alexandre ELBAZ, Alexis CALLIES",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-e75/NodeJS/issues"
+  },
+  "homepage": "https://github.com/alex-e75/NodeJS#readme",
+  "dependencies": {
+    "ejs": "^2.7.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
