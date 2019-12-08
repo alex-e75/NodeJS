@@ -1,4 +1,4 @@
-# Node.js Project
+# Node.js Labs
 
 ## Introduction
 
