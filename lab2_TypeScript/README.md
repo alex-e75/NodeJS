@@ -26,7 +26,7 @@ Now you can start the web server in the terminal using the following command:
 npm start
 ```
 
-To see the website in the browser go to ```localhost:8080/```.
+To see the website in the browser go to ```localhost:8115/``` and create a new account or you can run ```npm run populate``` to populate the app with test users and metrics.
 
 To see the credentials of these test users see the file [/bin/populate.ts](https://github.com/geraosio/ece-nodejs/blob/master/bin/populate.ts).
 

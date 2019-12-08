@@ -1,9 +1,0 @@
-version: '3.3'
-
-services:
-  node-ece:
-    build: .
-    image: elbazalexandre/node-app:latest
-    ports:
-      - 8080:8080
-    command: npm start
