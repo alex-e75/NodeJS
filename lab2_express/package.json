@@ -20,7 +20,7 @@
   "homepage": "https://github.com/alex-e75/NodeJS#readme",
   "dependencies": {
     "ejs": "^2.7.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "nodemon": "^1.19.4"
   },
   "devDependencies": {
